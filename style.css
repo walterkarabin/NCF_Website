@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+
+body {
+    position: relative;
+    background: #1D212B;
+    overflow-x: hidden;
+}
+
+/* Custom Scrollbars */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    scrollbar-gutter: auto;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: lightgrey;
+}
+
+::-webkit-scrollbar-track-piece {
+    background: lightgray;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section:nth-child(1) {
+    color: #fff;
+}
+
+section:nth-child(2) {
+    color: #1D212B;
+    background: #fff;
+}
+
+section:nth-child(3) {
+    color: #fff;
+}
+
+section:nth-child(4) {
+    color: #1D212B;
+    background: #fff;
+}
+
+section .container {
+    margin: 100px;
+}
+
+section .title {
+    flex-grow: 1;
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(lightgrey 25%, transparent 75%);
+}
+
+section h1 {
+    top: 50%;
+    padding: 2em;
+    font-size: xx-large;
+    text-align: center;
+    background: darkgrey;
+    box-shadow: 0 0 100px 100px darkgrey;
+}
+
+section h2 {
+    font-size: medium;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section .cards {
+    display: flex;
+    flex-direction: column;
+}
+
+section .cards .text-card {
+    background: lightcoral;
+    margin: 20px;
+    padding: 20px;
+}
+
+section .cards .text-card h3 {
+    font-size: medium;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+    section h1 {
+        font-size: x-large;
+    }
+
+    section .cards {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+/* Reveal & Actvie class which allow for cool animation on scroll */
+.reveal {
+    position: relative;
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.move-up {
+    transform: translateY(150px);
+}
+
+.reveal.move-right {
+    transform: translateX(-150px);
+}
+
+.reveal.move-left {
+    transform: translateX(150px);
+}
+
+.reveal.slower {
+    transition: all 2.5s ease;
+}
+
+.reveal.active {
+    transform: translateY(0px) translateX(0px);
+    opacity: 1;
+}
+
+/* Cool Parallelogram styles */
+.parallelogram {
+    width: fit-content;
+    height: fit-content;
+    background-color: red;
+    transform: skew(-20deg);
+    text-align: center;
+}
+
+/* On */
+.on-load {
+    position: relative;
+    opacity: 0;
+    transition: all 4s ease;
+}
+
+.on-load.move-right {
+    transform: translateX(-150px);
+}
+
+.on-load.move-left {
+    transform: translateX(150px);
+}
+
+.on-load.loaded {
+    
+    opacity: 1;
+    box-shadow: 0 0 0px 0px darkgrey;
+}
+
+.on-load.loaded.parallelogram {
+    transform: skew(-20deg) translateX(0px);
+    opacity: 1;
+}
+
+/* arrow */
+.swipe-up{
+    position: relative;
+    padding: 2em;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow{
+    width: 110px;
+    height: 60px;
+    position: relative;
+}
+
+#arrow:hover {
+    animation: bounce 1s infinite;
+    opacity: 0.8;
+}
+
+@keyframes bounce {
+    50% {
+      transform: translateY(10px);
+    }
+}
+
+.ar-l{
+    transition: all 4s ease-in;
+    position: absolute;
+    top: 5px;
+    left: 26px;
+    height: 40px;
+    width: 10px;
+    background-color: white;
+    transform: skew(45deg);
+    /* border-radius: 10%; */
+    box-shadow: 0 0 5px 5px darkgrey;
+
+}
+.ar-r{
+    transition: all 4s ease-in;
+    position: absolute;
+    top: 5px;
+    right: 26px;
+    height: 40px;
+    width: 10px;
+    background-color: white;
+    transform: skew(-45deg);
+    /* border-radius: 10%; */
+    box-shadow: 0 0 5px 5px darkgrey;
+}
+
+.swipe-text{
+    transition: all 4s ease-in;
+    bottom: 0;
+}
