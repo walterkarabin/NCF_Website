@@ -11,7 +11,7 @@
 
 body {
     position: relative;
-    background: #a9b1c4;
+    background: #a7e2e4;
     overflow-x: hidden;
 }
 
@@ -277,4 +277,5 @@ section .cards .text-card h3 {
     background-color: #1D212B;
     max-width: 600px;
     margin: auto;
+    box-shadow: 50px 0 1000px 0  black;
 }
