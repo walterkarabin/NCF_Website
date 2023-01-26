@@ -11,8 +11,13 @@
 
 body {
     position: relative;
-    background: #a7e2e4;
+    background: #ffffff;
     overflow-x: hidden;
+}
+
+h2 {
+    color: #ffffff;
+    /* background-color: #555; */
 }
 
 /* Custom Scrollbars */
@@ -49,9 +54,11 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: black;
+    background: black;
 }
 
-section:nth-child(1) {
+/* section:nth-child(1) {
     color: #fff;
 }
 
@@ -67,7 +74,7 @@ section:nth-child(3) {
 section:nth-child(4) {
     color: #1D212B;
     background: #fff;
-}
+} */
 
 section .container {
     margin: 20px;
@@ -101,7 +108,7 @@ section .cards {
 }
 
 section .cards .text-card {
-    background: lightcoral;
+    background: white;
     margin: 20px;
     padding: 20px;
 }
@@ -206,7 +213,7 @@ section .cards .text-card h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(#1d212bab 0%, #1d212bab 25%, transparent 75%);
+    background: radial-gradient(rgba(255, 255, 255, 0.342) 0%, transparent 75%);
     transition: opacity 0.5s;
     /* box-shadow: 0 0 50px 0px #1d212bab, inset 0 0 100px 0px #1d212bab; */
 }
@@ -257,6 +264,7 @@ section .cards .text-card h3 {
 }
 
 .swipe-text {
+    color: white;
     transition: all 4s ease-in;
     bottom: 0;
 }

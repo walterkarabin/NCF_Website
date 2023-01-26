@@ -17,7 +17,8 @@ function reveal(){
         }
         else{
             // remove them from the active class to make them disappear
-            reveals[index].classList.remove('active');
+            // reveals[index].classList.remove('active');
+            // Walter: commented out to avoid to much motion when scrolling
         }
     }
 }
